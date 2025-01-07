@@ -1,0 +1,15 @@
+using System;
+int r;
+double p, t, si, ci;
+System.Console.Write("Enter p:");
+p = Convert.ToInt32(Console.ReadLine());
+System.Console.Write("Enter t:");
+t = Convert.ToInt32(Console.ReadLine());
+System.Console.Write("Enter r:");
+r = Convert.ToInt32(Console.ReadLine());
+System.Console.Write("Enter si:");
+si = Convert.ToInt32(Console.ReadLine());
+si = p * t * r / 100;
+System.Console.Write("Enter ci:");
+ci = Convert.ToInt32(Console.ReadLine());
+ci = p * Math.Pow((1 + r / 100),t);
