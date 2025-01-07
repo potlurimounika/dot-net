@@ -1,0 +1,11 @@
+using System;
+int a, b,c;
+System.Console.Write("Enter a..:");
+a = Convert.ToInt32(Console.ReadLine());
+System.Console.Write("Enter b..:");
+b = Convert.ToInt32(Console.ReadLine());
+System.Console.WriteLine("values before swap a=" + a + "\t" + "b=" + b);
+c = a;
+a = b;
+b = c;
+System.Console.WriteLine("values after swap a=" + a + "\t" + "b=" + b);
