@@ -1,0 +1,16 @@
+using System;
+class Bird
+{
+    public void fly()
+    {
+        System.Console.WriteLine("They fly to fulfill natural activities");
+    }
+    public static void Main(string[] args)
+    {
+        Bird parrot = new Bird();
+        parrot.fly();
+        System.Console.WriteLine("...............");
+        Bird pigeon = new Bird();
+        parrot.fly();
+    }
+}
