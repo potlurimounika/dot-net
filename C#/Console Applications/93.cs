@@ -1,21 +1,17 @@
 using System;
-class Car
+class React
 {
-    string brand;
-    Car(string theBrand)
+    public int l;
+    public int b;
+    public int Carea()
     {
-        brand=theBrand;
+        return l*b;
     }
-    Car(Car c1)
+    public static void Main()
     {
-        brand = c1.brand;
-    }
-    static void Main(string[] args)
-    {
-        Car car1 = new Car("Bugatti");
-        Console.WriteLine("Brand of car1:"+car1.brand);
-        Car car2 = new Car(car1);
-        Console.WriteLine("Brand of car2:" + car2.brand);
-        Console.ReadLine();
+        React R=new React();
+        R.l = 20;
+        R.b = 10;
+        System.Console.WriteLine("Area="+R.Carea());
     }
 }
