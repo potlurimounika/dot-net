@@ -1,25 +1,39 @@
 using System;
-class Test
+class InvalidAgeException : Exception
 {
-    static void Main()
+    public InvalidAgeException(string message) : base(message) { }
+
+    public void PrintMessage()
     {
-        int a = 10;
-        int b = 2;
-        try
+        Console.WriteLine("Not Eligible To Vote");
+    }
+    public static void CheckAge(int age)
+    {
+        if (age < 18)
         {
-            System.Console.WriteLine("Begin");
-            System.Console.WriteLine("Ready to do Division");
-            int c = a / b;
-            Console.WriteLine("Result:" + c);
-            System.Console.WriteLine("End");
+            throw new InvalidAgeException("Invalid Age");
         }
-        catch (Exception ex)
+        else
         {
-            System.Console.WriteLine("you cannot divide a number with zero");
-        }
-        finally
-        {
-            System.Console.WriteLine("success fully execute this program");
+            Console.WriteLine("Eligible To Vote");
         }
     }
-} 
+}
+class Test
+{
+    public int age;
+    public static void Main(string[] args)
+    {
+        Test test = new Test();
+        test.age = 45; 
+        try
+        {
+            InvalidAgeException.CheckAge(test.age);  
+        }
+        catch (InvalidAgeException e)
+        {
+            Console.WriteLine(e.Message);
+            e.PrintMessage();
+        }
+    }
+}
