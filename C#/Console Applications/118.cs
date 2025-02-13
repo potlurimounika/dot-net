@@ -9,7 +9,7 @@ class Test
         hs.Add("2", "Pencil");
         hs.Add("3", "Eraser");
         ICollection key = hs.Keys;
-        foreach (int k in key)
+        foreach (string k in key)
         {
             Console.WriteLine(k + ":" + hs[k]);
         }
